@@ -10,7 +10,9 @@ set mouse=a
 
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " close if only tree left
 
-autocmd vimenter * NERDTreeToggle
+" autocmd vimenter * NERDTreeToggle
+
+:nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
 map <C-g> :NERDTreeToggle<CR> "toggle nerd tree
 
