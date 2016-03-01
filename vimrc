@@ -5,10 +5,11 @@
 
 :tab sall
 
+
 " editor settings
-set mouse=a
-set clipboard=unnamed
-set cursorline
+" set mouse=a
+" set clipboard=unnamed
+" set cursorline
 set ruler							" line numbers and column the cursor is on
 set number							" Show line numbering
 set showcmd
@@ -24,8 +25,6 @@ set guitablabel=%N/\ %t\ %M
 
 " remove toolbar widget
 set guioptions-=T
-
-set guifont=Cousine\ 10
 
 set ttyfast " u got a fast terminal
 set ttyscroll=3
@@ -45,7 +44,7 @@ syntax on
 filetype on                 " enables filetype detection
 filetype plugin indent on   " enables filetype specific plugins
 
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
 " remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
@@ -112,14 +111,17 @@ autocmd BufRead *
 " Appearance settings
 " --------------------------------------------------------
 
-set t_ts=^[]1;
-set t_fs=^G
+"set t_ts=^[]1;
+"set t_fs=^G
 
-" colorscheme molokai
-set bg=dark
+colorscheme molokai
+"colorscheme solarized
 set t_Co=256
 let g:molokai_original = 0
-colorscheme molokai
+"set guifont=Lucida_Console:h11
+" colorscheme badwolf
+
+hi Visual term=reverse cterm=reverse guibg=Grey
 
 " --------------------------------------------------------
 " Behaviour settings
